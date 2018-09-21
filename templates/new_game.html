@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>New Game</title>
+        <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/fav_icon.png') }}">
+        <script src="{{ url_for('static', filename='js/new_game.js')}}"></script>
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.5/css/bootstrap-dialog.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.5/js/bootstrap-dialog.min.js"></script>
+    </head>
+
+    <body onkeypress="detectEnterKeyStroke()" >
+
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Ping Pong Rankings</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a href="/players">Players</a></li>
+                    <li><a href="/teams">Teams</a></li>
+                    <li><a href="/view_games">Game History</a></li>
+                    <li><a href="/new_game">Record New Game</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="jumbotron">
+            <h1 align="center">Record New Game</h1><br>
+        </div>
+
+        <h2>
+            <center>
+                <form id="form" method="POST" onsubmit="return submitForm();">
+
+                    <div class="row">
+
+                        <div class="col-xs-6 form-group">
+                            <h1>Winning Team:</h1>
+                        </div>
+
+                        <div class="col-xs-6 form-group">
+                            <h1>Losing Team:</h1>
+                        </div>
+
+                        <br><br><br>
+
+                        <div class="col-xs-6 form-group">
+                            <input autofocus tabindex="1" style="text-align:center" class="form-input" name="winp1" placeholder="Winning Player 1 *" type="text"/>
+                        </div>
+                        <div class="col-xs-6 form-group">
+                            <input tabindex="2" style="text-align:center" class="form-input" name="losep1" placeholder="Losing Player 1 *" type="text"/>
+                        </div>
+
+                        <br><br><br>
+
+                        <div class="col-xs-6 form-group">
+                            <input tabindex="3" style="text-align:center" class="form-input" name="winp2" placeholder="Winning Player 2" type="text"/>
+                        </div>
+                        <div class="col-xs-6 form-group">
+                            <input tabindex="4" style="text-align:center" class="form-input" name="losep2" placeholder="Losing Player 2" type="text"/>
+                        </div>
+
+                        <br><br><br>
+
+                        <div class="col-xs-6 form-group">
+                            <input tabindex="5" style="text-align:center" class="form-input" name="winScore" placeholder="Winning Score *" type="number"/>
+                        </div>
+                        <div class="col-xs-6 form-group">
+                            <input tabindex="6" style="text-align:center" class="form-input" name="loseScore" placeholder="Losing Score *" type="number"/>
+                        </div>
+
+                    </div>
+
+                    <br><br><br>
+
+                    <center>
+                        <input tabindex="7" class="btn btn-success btn-xl" type="button" onclick="submitForm()" value="Submit Game" name="submit">
+                    </center>
+
+                    <br><br><br>
+                    
+                </form>
+            </center>
+        <h2>
+
+        <footer>
+            <h4 align="center">* indicates required field.</h4>
+        </footer>
+
+        <style>
+            form-input {
+                background: #fafafa;
+                border: 1px solid #bfbfbf;
+                border-radius: 2px;
+                padding: 12px 16px;
+                min-width: 5%;
+            }
+
+            .btn-xl {
+                padding: 18px 28px;
+                font-size: 22px;
+                border-radius: 8px;
+            }
+        </style> 
+
+    </body>
+</html>

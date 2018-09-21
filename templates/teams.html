@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Teams</title>
+        <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/fav_icon.png') }}">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
+        <script language="JavaScript" type="text/javascript" src="{{ url_for('static', filename='js/teams.js') }}"></script>
+        <script language="JavaScript" type="text/javascript" src="//code.jquery.com/jquery-1.12.3.js"></script>
+        <script language="JavaScript" type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+    </head>
+
+    <body>
+
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Ping Pong Rankings</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a href="/players">Players</a></li>
+                    <li><a href="/teams">Teams</a></li>
+                    <li><a href="/view_games">Game History</a></li>
+                    <li><a href="/new_game">Record New Game</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="jumbotron">
+            <h1 align="center">Teams</h1>
+        </div>
+
+        <table id="teams" class="display" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th>Players</th>
+                    <th>ELO</th>
+                    <th>Wins</th>
+                    <th>Losses</th>
+                    <th>Win %</th>
+                    <th>Current Win Streak</th>
+                    <th>Longest Win Streak</th>
+                </tr>
+            </thead>
+
+            <tfoot>
+                <tr>
+                    <th>Players</th>
+                    <th>ELO</th>
+                    <th>Wins</th>
+                    <th>Losses</th>
+                    <th>Win %</th>
+                    <th>Current Win Streak</th>
+                    <th>Longest Win Streak</th>
+                </tr>
+            </tfoot>
+        </table>
+
+    </body>
+</html>

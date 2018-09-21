@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Rankings</title>
+        <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/fav_icon.png') }}">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    </head>
+
+    <body>
+
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Ping Pong Rankings</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a href="/players">Players</a></li>
+                    <li><a href="/teams">Teams</a></li>
+                    <li><a href="/view_games">Game History</a></li>
+                    <li><a href="/new_game">Record New Game</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- To fit background to screen size -->
+    	<style>
+    		{ margin: 0; padding: 0 }
+
+    		body {
+    			background: url("/static/images/pong_action.png") no-repeat;
+				background-size: cover;
+    		}
+    	</style>
+
+    </body>
+</html>
