@@ -100,7 +100,7 @@ function submitForm () {
 
                     var score = winScore + " - " + loseScore;
 
-                    httpGetAsync("http://pong-rankings.herokuapp.com/save_new_game?winning_team=" + winning_team + "&losing_team=" + losing_team + "&score=" + score, theCallback)
+                    httpGetAsync("http://pong-ratings.herokuapp.com/save_new_game?winning_team=" + winning_team + "&losing_team=" + losing_team + "&score=" + score, theCallback)
                 }
             }]
         });

@@ -18,7 +18,7 @@ last_game_save_datetime = datetime.datetime.now() - datetime.timedelta(minutes=2
 # Math import for ELO calculations
 import math
 
-# Mongo import and connection to pong-ranking mongoDB instance
+# Mongo import and connection to pong-ratings mongoDB instance
 from pymongo import MongoClient
 mongo_user = 'pong-ratings'
 mongo_pass = 'pong-ratings1'
