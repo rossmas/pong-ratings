@@ -39,7 +39,7 @@ K_FACTOR = 90
 class elo_core:
 
 	@classmethod
- 	def getExpectation(self, rating_1, rating_2):
+	def getExpectation(self, rating_1, rating_2):
 		calc = (1.0 / (1.0 + pow(10, ((rating_2 - rating_1) / 400))));
 		return calc;
 
