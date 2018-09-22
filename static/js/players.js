@@ -1,5 +1,5 @@
 // Initialize data table and order by ELO
-httpGetAsync("http://pong-ratings.herokuapp.com/get_player_history", theCallback);
+httpGetAsync("https://pong-ratings.herokuapp.com/get_player_history", theCallback);
 
 function theCallback(responseText) {
     var responseData = JSON.parse(responseText);

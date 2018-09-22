@@ -1,5 +1,5 @@
 // Initialize data table and order by Date
-httpGetAsync("http://pong-ratings.herokuapp.com/get_game_history", theCallback);
+httpGetAsync("https://pong-ratings.herokuapp.com/get_game_history", theCallback);
 
 function theCallback(responseText) {
     var responseData = JSON.parse(responseText);
