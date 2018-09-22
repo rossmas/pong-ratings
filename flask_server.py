@@ -1,4 +1,4 @@
-#!/usr/local/bin/python2.7
+#!/usr/local/bin/python3.6
 
 # Use to get port # from Heroku environment
 from os import environ
@@ -20,11 +20,11 @@ import math
 
 # Mongo import and connection to pong-ranking mongoDB instance
 from pymongo import MongoClient
-mongo_user = 'pong-rating'
-mongo_pass = 'pong-rating'
-mongodb_uri = 'mongodb://' + mongo_user + ':' + mongo_pass + '@ds013206.mlab.com:13206/heroku_vbhz283w'
+mongo_user = 'pong-ratings'
+mongo_pass = 'pong-ratings1'
+mongodb_uri = 'mongodb://' + mongo_user + ':' + mongo_pass + '@ds111113.mlab.com:11113/heroku_nj0jp351'
 mongo_client = MongoClient(mongodb_uri)
-db = mongo_client.heroku_vbhz283w
+db = mongo_client.heroku_nj0jp351
 
 # Flask import
 from flask import Flask, jsonify, render_template, request, Response
@@ -222,7 +222,7 @@ Find all TEAMS and return their JSON
 def get_teams_history():
 	cursor = db.teams.find()
 	cursor_count = cursor.count()
-	print '\n\nTeams query returned ' + str(cursor_count) + ' results.\n'
+	print('\n\nTeams query returned ' + str(cursor_count) + ' results.\n')
 	responseDict = {}
 	i = 0;
 	if cursor_count > 0:
@@ -240,7 +240,7 @@ Find all PLAYERS and return their JSON
 def get_player_history():
 	cursor = db.players.find()
 	cursor_count = cursor.count()
-	print '\n\nPlayers query returned ' + str(cursor_count) + ' results.\n'
+	print ('\n\nPlayers query returned ' + str(cursor_count) + ' results.\n')
 	responseDict = {}
 	i = 0;
 	if cursor_count > 0:
@@ -259,7 +259,7 @@ Find all GAMES and return their JSON
 def get_game_history():
 	cursor = db.games.find()
 	cursor_count = cursor.count()
-	print '\n\nGames query returned ' + str(cursor_count) + ' results.\n'
+	print ('\n\nGames query returned ' + str(cursor_count) + ' results.\n')
 	responseDict = {}
 	i = 0;
 	if cursor_count > 0:
